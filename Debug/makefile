@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS
+CG_TOOL_ROOT := C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -192,34 +192,35 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-Sensor_Hub_2.out \
+Tiva_c_sensor.out \
 
 EXE_OUTPUTS__QUOTED += \
-"Sensor_Hub_2.out" \
+"Tiva_c_sensor.out" \
 
 BIN_OUTPUTS += \
-Sensor_Hub_2.bin \
+Tiva_c_sensor.bin \
 
 BIN_OUTPUTS__QUOTED += \
-"Sensor_Hub_2.bin" \
+"Tiva_c_sensor.bin" \
 
 
 # All Target
-all: Sensor_Hub_2.out
+all: $(OBJS) $(CMD_SRCS) $(A_SRCS) $(LIB_SRCS) $(GEN_CMDS)
+	@$(MAKE) --no-print-directory -Onone "Tiva_c_sensor.out"
 
 # Tool invocations
-Sensor_Hub_2.out: $(OBJS) $(CMD_SRCS) $(A_SRCS) $(LIB_SRCS) $(GEN_CMDS)
+Tiva_c_sensor.out: $(OBJS) $(CMD_SRCS) $(A_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --c89 --relaxed_ansi --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Sensor_Hub_2.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/lib" -i"C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS" -i"D:/Sensor_Hub_2" -i"D:/Sensor_Hub_2/BSW" -i"D:/Sensor_Hub_2/Debug" -i"D:/Sensor_Hub_2/Debug/BSW/driverlib" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Sensor_Hub_2_linkInfo.xml" --rom_model -o "Sensor_Hub_2.out" $(ORDERED_OBJS) $(A_SRCS)
+	"C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Tiva_c_sensor.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/lib" -i"D:/Tivac_Sensor_Hub/BSW" -i"C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Tiva_c_sensor_linkInfo.xml" --rom_model -o "Tiva_c_sensor.out" $(ORDERED_OBJS) $(A_SRCS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 	@$(MAKE) --no-print-directory post-build
 
-Sensor_Hub_2.bin: $(EXE_OUTPUTS)
+Tiva_c_sensor.bin: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: ARM Hex Utility'
-	"C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/bin/armhex"  -o "Sensor_Hub_2.bin" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armhex"  -o "Tiva_c_sensor.bin" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 	@$(MAKE) --no-print-directory post-build
@@ -235,7 +236,7 @@ clean:
 	-@echo ' '
 
 post-build:
-	-C:/ti/ccs810/ccsv8/utils/tiobj2bin/tiobj2bin Sensor_Hub_2.out Sensor_Hub_2.bin C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/bin/armofd C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/bin/armhex C:/ti/ccs810/ccsv8/utils/tiobj2bin/mkhex4bin
+	-C:/ti/ccs810/ccsv8/utils/tiobj2bin/tiobj2bin Tiva_c_sensor.out Tiva_c_sensor.bin C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armofd C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armhex C:/ti/ccs810/ccsv8/utils/tiobj2bin/mkhex4bin
 	-@echo ' '
 
 .PHONY: all clean dependents

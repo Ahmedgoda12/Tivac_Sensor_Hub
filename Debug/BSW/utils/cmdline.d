@@ -1,21 +1,29 @@
 # FIXED
 
 BSW/utils/cmdline.obj: ../BSW/utils/cmdline.c
-BSW/utils/cmdline.obj: D:/Sensor_Hub_2/BSW/include/stdint.h
-BSW/utils/cmdline.obj: D:/Sensor_Hub_2/BSW/include/stdbool.h
-BSW/utils/cmdline.obj: D:/Sensor_Hub_2/BSW/include/yvals.h
-BSW/utils/cmdline.obj: D:/Sensor_Hub_2/BSW/include/stdarg.h
-BSW/utils/cmdline.obj: D:/Sensor_Hub_2/BSW/include/linkage.h
-BSW/utils/cmdline.obj: D:/Sensor_Hub_2/BSW/include/_lock.h
-BSW/utils/cmdline.obj: D:/Sensor_Hub_2/BSW/include/string.h
-BSW/utils/cmdline.obj: D:/Sensor_Hub_2/BSW/utils/cmdline.h
+BSW/utils/cmdline.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stdint.h
+BSW/utils/cmdline.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/stdint.h
+BSW/utils/cmdline.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/cdefs.h
+BSW/utils/cmdline.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/_types.h
+BSW/utils/cmdline.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/machine/_types.h
+BSW/utils/cmdline.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/machine/_stdint.h
+BSW/utils/cmdline.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/_stdint.h
+BSW/utils/cmdline.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stdbool.h
+BSW/utils/cmdline.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/string.h
+BSW/utils/cmdline.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/_ti_config.h
+BSW/utils/cmdline.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/linkage.h
+BSW/utils/cmdline.obj: D:/Tivac_Sensor_Hub/BSW/utils/cmdline.h
 
 ../BSW/utils/cmdline.c: 
-D:/Sensor_Hub_2/BSW/include/stdint.h: 
-D:/Sensor_Hub_2/BSW/include/stdbool.h: 
-D:/Sensor_Hub_2/BSW/include/yvals.h: 
-D:/Sensor_Hub_2/BSW/include/stdarg.h: 
-D:/Sensor_Hub_2/BSW/include/linkage.h: 
-D:/Sensor_Hub_2/BSW/include/_lock.h: 
-D:/Sensor_Hub_2/BSW/include/string.h: 
-D:/Sensor_Hub_2/BSW/utils/cmdline.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stdint.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/stdint.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/cdefs.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/_types.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/machine/_types.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/machine/_stdint.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/_stdint.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stdbool.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/string.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/_ti_config.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/linkage.h: 
+D:/Tivac_Sensor_Hub/BSW/utils/cmdline.h: 

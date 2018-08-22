@@ -1,35 +1,47 @@
 # FIXED
 
 BSW/driverlib/hibernate.obj: ../BSW/driverlib/hibernate.c
-BSW/driverlib/hibernate.obj: D:/Sensor_Hub_2/BSW/include/stdbool.h
-BSW/driverlib/hibernate.obj: D:/Sensor_Hub_2/BSW/include/yvals.h
-BSW/driverlib/hibernate.obj: D:/Sensor_Hub_2/BSW/include/stdarg.h
-BSW/driverlib/hibernate.obj: D:/Sensor_Hub_2/BSW/include/linkage.h
-BSW/driverlib/hibernate.obj: D:/Sensor_Hub_2/BSW/include/_lock.h
-BSW/driverlib/hibernate.obj: D:/Sensor_Hub_2/BSW/include/stdint.h
-BSW/driverlib/hibernate.obj: D:/Sensor_Hub_2/BSW/include/time.h
-BSW/driverlib/hibernate.obj: D:/Sensor_Hub_2/BSW/inc/hw_hibernate.h
-BSW/driverlib/hibernate.obj: D:/Sensor_Hub_2/BSW/inc/hw_ints.h
-BSW/driverlib/hibernate.obj: D:/Sensor_Hub_2/BSW/inc/hw_sysctl.h
-BSW/driverlib/hibernate.obj: D:/Sensor_Hub_2/BSW/inc/hw_types.h
-BSW/driverlib/hibernate.obj: D:/Sensor_Hub_2/BSW/driverlib/debug.h
-BSW/driverlib/hibernate.obj: D:/Sensor_Hub_2/BSW/driverlib/hibernate.h
-BSW/driverlib/hibernate.obj: D:/Sensor_Hub_2/BSW/driverlib/interrupt.h
-BSW/driverlib/hibernate.obj: D:/Sensor_Hub_2/BSW/driverlib/sysctl.h
+BSW/driverlib/hibernate.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stdbool.h
+BSW/driverlib/hibernate.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stdint.h
+BSW/driverlib/hibernate.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/stdint.h
+BSW/driverlib/hibernate.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/cdefs.h
+BSW/driverlib/hibernate.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/_types.h
+BSW/driverlib/hibernate.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/machine/_types.h
+BSW/driverlib/hibernate.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/machine/_stdint.h
+BSW/driverlib/hibernate.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/_stdint.h
+BSW/driverlib/hibernate.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/time.h
+BSW/driverlib/hibernate.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/_ti_config.h
+BSW/driverlib/hibernate.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/linkage.h
+BSW/driverlib/hibernate.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/abi_prefix.h
+BSW/driverlib/hibernate.obj: C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/xlocale/_time.h
+BSW/driverlib/hibernate.obj: D:/Tivac_Sensor_Hub/BSW/inc/hw_hibernate.h
+BSW/driverlib/hibernate.obj: D:/Tivac_Sensor_Hub/BSW/inc/hw_ints.h
+BSW/driverlib/hibernate.obj: D:/Tivac_Sensor_Hub/BSW/inc/hw_sysctl.h
+BSW/driverlib/hibernate.obj: D:/Tivac_Sensor_Hub/BSW/inc/hw_types.h
+BSW/driverlib/hibernate.obj: D:/Tivac_Sensor_Hub/BSW/driverlib/debug.h
+BSW/driverlib/hibernate.obj: D:/Tivac_Sensor_Hub/BSW/driverlib/hibernate.h
+BSW/driverlib/hibernate.obj: D:/Tivac_Sensor_Hub/BSW/driverlib/interrupt.h
+BSW/driverlib/hibernate.obj: D:/Tivac_Sensor_Hub/BSW/driverlib/sysctl.h
 
 ../BSW/driverlib/hibernate.c: 
-D:/Sensor_Hub_2/BSW/include/stdbool.h: 
-D:/Sensor_Hub_2/BSW/include/yvals.h: 
-D:/Sensor_Hub_2/BSW/include/stdarg.h: 
-D:/Sensor_Hub_2/BSW/include/linkage.h: 
-D:/Sensor_Hub_2/BSW/include/_lock.h: 
-D:/Sensor_Hub_2/BSW/include/stdint.h: 
-D:/Sensor_Hub_2/BSW/include/time.h: 
-D:/Sensor_Hub_2/BSW/inc/hw_hibernate.h: 
-D:/Sensor_Hub_2/BSW/inc/hw_ints.h: 
-D:/Sensor_Hub_2/BSW/inc/hw_sysctl.h: 
-D:/Sensor_Hub_2/BSW/inc/hw_types.h: 
-D:/Sensor_Hub_2/BSW/driverlib/debug.h: 
-D:/Sensor_Hub_2/BSW/driverlib/hibernate.h: 
-D:/Sensor_Hub_2/BSW/driverlib/interrupt.h: 
-D:/Sensor_Hub_2/BSW/driverlib/sysctl.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stdbool.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stdint.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/stdint.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/cdefs.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/_types.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/machine/_types.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/machine/_stdint.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/_stdint.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/time.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/_ti_config.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/linkage.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/abi_prefix.h: 
+C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/xlocale/_time.h: 
+D:/Tivac_Sensor_Hub/BSW/inc/hw_hibernate.h: 
+D:/Tivac_Sensor_Hub/BSW/inc/hw_ints.h: 
+D:/Tivac_Sensor_Hub/BSW/inc/hw_sysctl.h: 
+D:/Tivac_Sensor_Hub/BSW/inc/hw_types.h: 
+D:/Tivac_Sensor_Hub/BSW/driverlib/debug.h: 
+D:/Tivac_Sensor_Hub/BSW/driverlib/hibernate.h: 
+D:/Tivac_Sensor_Hub/BSW/driverlib/interrupt.h: 
+D:/Tivac_Sensor_Hub/BSW/driverlib/sysctl.h: 
