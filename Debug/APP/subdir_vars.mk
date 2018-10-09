@@ -6,21 +6,27 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../APP/blinky.c 
+../APP/Ecum.c \
+../APP/Light_sensor.c 
 
 C_DEPS += \
-./APP/blinky.d 
+./APP/Ecum.d \
+./APP/Light_sensor.d 
 
 OBJS += \
-./APP/blinky.obj 
+./APP/Ecum.obj \
+./APP/Light_sensor.obj 
 
 OBJS__QUOTED += \
-"APP\blinky.obj" 
+"APP\Ecum.obj" \
+"APP\Light_sensor.obj" 
 
 C_DEPS__QUOTED += \
-"APP\blinky.d" 
+"APP\Ecum.d" \
+"APP\Light_sensor.d" 
 
 C_SRCS__QUOTED += \
-"../APP/blinky.c" 
+"../APP/Ecum.c" \
+"../APP/Light_sensor.c" 
 
 

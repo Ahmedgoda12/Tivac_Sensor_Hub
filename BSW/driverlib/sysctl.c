@@ -581,8 +581,7 @@ SysCtlPeripheralEnable(uint32_t ui32Peripheral)
     //
     // Enable this peripheral.
     //
-    HWREGBITW(SYSCTL_RCGCBASE + ((ui32Peripheral & 0xff00) >> 8),
-              ui32Peripheral & 0xff) = 1;
+    HWREGBITW(SYSCTL_RCGCBASE + ((ui32Peripheral & 0xff00) >> 8),ui32Peripheral & 0xff) = 1;
 }
 
 //*****************************************************************************

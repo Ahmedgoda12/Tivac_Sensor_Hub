@@ -1844,6 +1844,8 @@ GPIOPinTypeUSBDigital(uint32_t ui32Port, uint8_t ui8Pins)
 //! \return None.
 //
 //*****************************************************************************
+
+
 void
 GPIOPinConfigure(uint32_t ui32PinConfig)
 {

@@ -549,7 +549,7 @@ I2CMasterIntEnable(uint32_t ui32Base)
 //! \param ui32Base is the base address of the I2C Master module.
 //! \param ui32IntFlags is the bit mask of the interrupt sources to be enabled.
 //!
-//! This function enables the indicated I2C Master interrupt sources.  Only the
+//! This function enables the indicated I2C Master interrupt sources.Only the
 //! sources that are enabled can be reflected to the processor interrupt;
 //! disabled sources have no effect on the processor.
 //!

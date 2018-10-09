@@ -4,13 +4,14 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS
+CG_TOOL_ROOT := C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
-"./APP/blinky.obj" \
+"./APP/Ecum.obj" \
+"./APP/Light_sensor.obj" \
 "./BSW/driverlib/adc.obj" \
 "./BSW/driverlib/can.obj" \
 "./BSW/driverlib/comp.obj" \
@@ -212,7 +213,7 @@ all: $(OBJS) $(CMD_SRCS) $(A_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 Tiva_c_sensor.out: $(OBJS) $(CMD_SRCS) $(A_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Tiva_c_sensor.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/lib" -i"D:/Tivac_Sensor_Hub/BSW" -i"C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Tiva_c_sensor_linkInfo.xml" --rom_model -o "Tiva_c_sensor.out" $(ORDERED_OBJS) $(A_SRCS)
+	"C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Tiva_c_sensor.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/lib" -i"G:/Tivac_Sensor_Hub/APP" -i"G:/Tivac_Sensor_Hub" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Tiva_c_sensor_linkInfo.xml" --rom_model -o "Tiva_c_sensor.out" $(ORDERED_OBJS) $(A_SRCS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 	@$(MAKE) --no-print-directory post-build
@@ -220,7 +221,7 @@ Tiva_c_sensor.out: $(OBJS) $(CMD_SRCS) $(A_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 Tiva_c_sensor.bin: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: ARM Hex Utility'
-	"C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armhex"  -o "Tiva_c_sensor.bin" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armhex"  -o "Tiva_c_sensor.bin" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 	@$(MAKE) --no-print-directory post-build
@@ -228,15 +229,15 @@ Tiva_c_sensor.bin: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "APP\blinky.obj" "BSW\driverlib\adc.obj" "BSW\driverlib\can.obj" "BSW\driverlib\comp.obj" "BSW\driverlib\cpu.obj" "BSW\driverlib\eeprom.obj" "BSW\driverlib\flash.obj" "BSW\driverlib\fpu.obj" "BSW\driverlib\gpio.obj" "BSW\driverlib\hibernate.obj" "BSW\driverlib\i2c.obj" "BSW\driverlib\interrupt.obj" "BSW\driverlib\mpu.obj" "BSW\driverlib\pwm.obj" "BSW\driverlib\qei.obj" "BSW\driverlib\ssi.obj" "BSW\driverlib\sw_crc.obj" "BSW\driverlib\sysctl.obj" "BSW\driverlib\sysexc.obj" "BSW\driverlib\systick.obj" "BSW\driverlib\timer.obj" "BSW\driverlib\uart.obj" "BSW\driverlib\udma.obj" "BSW\driverlib\usb.obj" "BSW\driverlib\watchdog.obj" "BSW\sensorlib\ak8963.obj" "BSW\sensorlib\ak8975.obj" "BSW\sensorlib\bmp180.obj" "BSW\sensorlib\cm3218.obj" "BSW\sensorlib\comp_dcm.obj" "BSW\sensorlib\i2cm_drv.obj" "BSW\sensorlib\isl29023.obj" "BSW\sensorlib\kxti9.obj" "BSW\sensorlib\l3gd20h.obj" "BSW\sensorlib\lsm303d.obj" "BSW\sensorlib\lsm303dlhc_accel.obj" "BSW\sensorlib\lsm303dlhc_mag.obj" "BSW\sensorlib\magneto.obj" 
-	-$(RM) "BSW\sensorlib\mpu6050.obj" "BSW\sensorlib\mpu9150.obj" "BSW\sensorlib\quaternion.obj" "BSW\sensorlib\sht21.obj" "BSW\sensorlib\tmp006.obj" "BSW\sensorlib\vector.obj" "BSW\startup_ccs.obj" "BSW\utils\cmdline.obj" "BSW\utils\cpu_usage.obj" "BSW\utils\flash_pb.obj" "BSW\utils\isqrt.obj" "BSW\utils\random.obj" "BSW\utils\ringbuf.obj" "BSW\utils\scheduler.obj" "BSW\utils\sine.obj" "BSW\utils\softi2c.obj" "BSW\utils\softssi.obj" "BSW\utils\softuart.obj" "BSW\utils\uartstdio.obj" "BSW\utils\ustdlib.obj" 
-	-$(RM) "APP\blinky.d" "BSW\driverlib\adc.d" "BSW\driverlib\can.d" "BSW\driverlib\comp.d" "BSW\driverlib\cpu.d" "BSW\driverlib\eeprom.d" "BSW\driverlib\flash.d" "BSW\driverlib\fpu.d" "BSW\driverlib\gpio.d" "BSW\driverlib\hibernate.d" "BSW\driverlib\i2c.d" "BSW\driverlib\interrupt.d" "BSW\driverlib\mpu.d" "BSW\driverlib\pwm.d" "BSW\driverlib\qei.d" "BSW\driverlib\ssi.d" "BSW\driverlib\sw_crc.d" "BSW\driverlib\sysctl.d" "BSW\driverlib\sysexc.d" "BSW\driverlib\systick.d" "BSW\driverlib\timer.d" "BSW\driverlib\uart.d" "BSW\driverlib\udma.d" "BSW\driverlib\usb.d" "BSW\driverlib\watchdog.d" "BSW\sensorlib\ak8963.d" "BSW\sensorlib\ak8975.d" "BSW\sensorlib\bmp180.d" "BSW\sensorlib\cm3218.d" "BSW\sensorlib\comp_dcm.d" "BSW\sensorlib\i2cm_drv.d" "BSW\sensorlib\isl29023.d" "BSW\sensorlib\kxti9.d" "BSW\sensorlib\l3gd20h.d" "BSW\sensorlib\lsm303d.d" "BSW\sensorlib\lsm303dlhc_accel.d" "BSW\sensorlib\lsm303dlhc_mag.d" "BSW\sensorlib\magneto.d" "BSW\sensorlib\mpu6050.d" "BSW\sensorlib\mpu9150.d" "BSW\sensorlib\quaternion.d" 
-	-$(RM) "BSW\sensorlib\sht21.d" "BSW\sensorlib\tmp006.d" "BSW\sensorlib\vector.d" "BSW\startup_ccs.d" "BSW\utils\cmdline.d" "BSW\utils\cpu_usage.d" "BSW\utils\flash_pb.d" "BSW\utils\isqrt.d" "BSW\utils\random.d" "BSW\utils\ringbuf.d" "BSW\utils\scheduler.d" "BSW\utils\sine.d" "BSW\utils\softi2c.d" "BSW\utils\softssi.d" "BSW\utils\softuart.d" "BSW\utils\uartstdio.d" "BSW\utils\ustdlib.d" 
+	-$(RM) "APP\Ecum.obj" "APP\Light_sensor.obj" "BSW\driverlib\adc.obj" "BSW\driverlib\can.obj" "BSW\driverlib\comp.obj" "BSW\driverlib\cpu.obj" "BSW\driverlib\eeprom.obj" "BSW\driverlib\flash.obj" "BSW\driverlib\fpu.obj" "BSW\driverlib\gpio.obj" "BSW\driverlib\hibernate.obj" "BSW\driverlib\i2c.obj" "BSW\driverlib\interrupt.obj" "BSW\driverlib\mpu.obj" "BSW\driverlib\pwm.obj" "BSW\driverlib\qei.obj" "BSW\driverlib\ssi.obj" "BSW\driverlib\sw_crc.obj" "BSW\driverlib\sysctl.obj" "BSW\driverlib\sysexc.obj" "BSW\driverlib\systick.obj" "BSW\driverlib\timer.obj" "BSW\driverlib\uart.obj" "BSW\driverlib\udma.obj" "BSW\driverlib\usb.obj" "BSW\driverlib\watchdog.obj" "BSW\sensorlib\ak8963.obj" "BSW\sensorlib\ak8975.obj" "BSW\sensorlib\bmp180.obj" "BSW\sensorlib\cm3218.obj" "BSW\sensorlib\comp_dcm.obj" "BSW\sensorlib\i2cm_drv.obj" "BSW\sensorlib\isl29023.obj" "BSW\sensorlib\kxti9.obj" "BSW\sensorlib\l3gd20h.obj" "BSW\sensorlib\lsm303d.obj" "BSW\sensorlib\lsm303dlhc_accel.obj" "BSW\sensorlib\lsm303dlhc_mag.obj" 
+	-$(RM) "BSW\sensorlib\magneto.obj" "BSW\sensorlib\mpu6050.obj" "BSW\sensorlib\mpu9150.obj" "BSW\sensorlib\quaternion.obj" "BSW\sensorlib\sht21.obj" "BSW\sensorlib\tmp006.obj" "BSW\sensorlib\vector.obj" "BSW\startup_ccs.obj" "BSW\utils\cmdline.obj" "BSW\utils\cpu_usage.obj" "BSW\utils\flash_pb.obj" "BSW\utils\isqrt.obj" "BSW\utils\random.obj" "BSW\utils\ringbuf.obj" "BSW\utils\scheduler.obj" "BSW\utils\sine.obj" "BSW\utils\softi2c.obj" "BSW\utils\softssi.obj" "BSW\utils\softuart.obj" "BSW\utils\uartstdio.obj" "BSW\utils\ustdlib.obj" 
+	-$(RM) "APP\Ecum.d" "APP\Light_sensor.d" "BSW\driverlib\adc.d" "BSW\driverlib\can.d" "BSW\driverlib\comp.d" "BSW\driverlib\cpu.d" "BSW\driverlib\eeprom.d" "BSW\driverlib\flash.d" "BSW\driverlib\fpu.d" "BSW\driverlib\gpio.d" "BSW\driverlib\hibernate.d" "BSW\driverlib\i2c.d" "BSW\driverlib\interrupt.d" "BSW\driverlib\mpu.d" "BSW\driverlib\pwm.d" "BSW\driverlib\qei.d" "BSW\driverlib\ssi.d" "BSW\driverlib\sw_crc.d" "BSW\driverlib\sysctl.d" "BSW\driverlib\sysexc.d" "BSW\driverlib\systick.d" "BSW\driverlib\timer.d" "BSW\driverlib\uart.d" "BSW\driverlib\udma.d" "BSW\driverlib\usb.d" "BSW\driverlib\watchdog.d" "BSW\sensorlib\ak8963.d" "BSW\sensorlib\ak8975.d" "BSW\sensorlib\bmp180.d" "BSW\sensorlib\cm3218.d" "BSW\sensorlib\comp_dcm.d" "BSW\sensorlib\i2cm_drv.d" "BSW\sensorlib\isl29023.d" "BSW\sensorlib\kxti9.d" "BSW\sensorlib\l3gd20h.d" "BSW\sensorlib\lsm303d.d" "BSW\sensorlib\lsm303dlhc_accel.d" "BSW\sensorlib\lsm303dlhc_mag.d" "BSW\sensorlib\magneto.d" "BSW\sensorlib\mpu6050.d" "BSW\sensorlib\mpu9150.d" 
+	-$(RM) "BSW\sensorlib\quaternion.d" "BSW\sensorlib\sht21.d" "BSW\sensorlib\tmp006.d" "BSW\sensorlib\vector.d" "BSW\startup_ccs.d" "BSW\utils\cmdline.d" "BSW\utils\cpu_usage.d" "BSW\utils\flash_pb.d" "BSW\utils\isqrt.d" "BSW\utils\random.d" "BSW\utils\ringbuf.d" "BSW\utils\scheduler.d" "BSW\utils\sine.d" "BSW\utils\softi2c.d" "BSW\utils\softssi.d" "BSW\utils\softuart.d" "BSW\utils\uartstdio.d" "BSW\utils\ustdlib.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
 post-build:
-	-C:/ti/ccs810/ccsv8/utils/tiobj2bin/tiobj2bin Tiva_c_sensor.out Tiva_c_sensor.bin C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armofd C:/ti/ccs810/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armhex C:/ti/ccs810/ccsv8/utils/tiobj2bin/mkhex4bin
+	-C:/ti/ccsv8/utils/tiobj2bin/tiobj2bin Tiva_c_sensor.out Tiva_c_sensor.bin C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armofd C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armhex C:/ti/ccsv8/utils/tiobj2bin/mkhex4bin
 	-@echo ' '
 
 .PHONY: all clean dependents

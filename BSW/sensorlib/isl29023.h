@@ -25,6 +25,8 @@
 #ifndef __SENSORLIB_ISL29023_H__
 #define __SENSORLIB_ISL29023_H__
 
+
+#include"sensorlib/i2cm_drv.h"
 //*****************************************************************************
 //
 // If building with a C++ compiler, make all of the definitions in this header
